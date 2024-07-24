@@ -61,11 +61,12 @@
 		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.70" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.70" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+		<PackageReference Include="Syncfusion.Maui.Gauges" Version="26.2.4" />
 		<!--<PackageReference Include="Syncfusion.Maui.Inputs" Version="25.2.7" />
 		<PackageReference Include="Syncfusion.Maui.Popup" Version="25.2.7" />-->
 
-		<PackageReference Include="Syncfusion.Maui.Inputs" Version="26.1.42" />
-		<PackageReference Include="Syncfusion.Maui.Popup" Version="26.1.42" />
+		<PackageReference Include="Syncfusion.Maui.Inputs" Version="26.2.4" />
+		<PackageReference Include="Syncfusion.Maui.Popup" Version="26.2.4" />
 	</ItemGroup>
 
 </Project>

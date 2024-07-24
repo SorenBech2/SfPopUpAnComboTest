@@ -20,6 +20,8 @@ namespace SfPopUpAnComboTest
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
+            builder.Services.AddTransient<MainPage>();
+            builder.Services.AddSingleton<GetCardInformation>();
 
             return builder.Build();
         }

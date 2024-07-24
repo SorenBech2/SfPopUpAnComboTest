@@ -2,17 +2,17 @@
 {
     public partial class MainPage : ContentPage
     {
-        public MainPage()
+        GetCardInformation _getCardPage;
+        public MainPage(GetCardInformation getCardPage)
         {
             InitializeComponent();
+            _getCardPage = getCardPage; 
         }
 
         private async void ButtonClicked(object sender, EventArgs e)
         {
-            (Card?, bool) cardToPayWith = new();
-
-            GetCardInformation getCardPage = new(true);
-            cardToPayWith = await getCardPage.GetCardInfoResult();
+            //GetCardInformation getCardPage = new(true);
+            var cardToPayWith = await _getCardPage.GetCardInfoResult();
         }
     }
 }

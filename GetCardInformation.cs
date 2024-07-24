@@ -26,8 +26,9 @@ namespace SfPopUpAnComboTest
         [ObservableProperty]
         private ObservableCollection<DateInformation> expirationYears = [];
 
-        public GetCardInformation(bool payWithCard)
+        public GetCardInformation()
         {
+            bool payWithCard = true;
             // Builds the expiration month list
             for (int i = 1; i <= 12; i++)
             {
@@ -463,8 +464,10 @@ namespace SfPopUpAnComboTest
             // Do something
         }
 
-        private void AddCardButton_Pressed(object? sender, EventArgs e)
+        private async void AddCardButton_Pressed(object? sender, EventArgs e)
         {
+            var delay = new DelayResult(5);
+            var waitABit = await delay.GetResult();
             addCardButtonWasPressed = true;
             GetCardInfoPopUp.IsOpen = false;
         }
