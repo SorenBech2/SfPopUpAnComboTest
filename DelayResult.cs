@@ -1,7 +1,7 @@
 using CommunityToolkit.Mvvm.ComponentModel;
-using Microsoft.Maui.Layouts;
+//using Microsoft.Maui.Layouts;
 using Microsoft.Maui.Platform;
-using Syncfusion.Maui.Gauges;
+//using Syncfusion.Maui.Gauges;
 using Syncfusion.Maui.Popup;
 
 namespace SfPopUpAnComboTest
@@ -64,51 +64,51 @@ namespace SfPopUpAnComboTest
             });
             ShowCountDownTimer.HeaderTemplate = _headerTemplate;
 
-            SfRadialGauge sfRadialGauge = new()
-            {
-                HeightRequest = 200,
-                BackgroundColor = Colors.Transparent
-            };
+            //SfRadialGauge sfRadialGauge = new()
+            //{
+            //    HeightRequest = 200,
+            //    BackgroundColor = Colors.Transparent
+            //};
 
-            RadialAxis radialAxis = new()
-            {
-                StartAngle = 270,
-                EndAngle = 270,
-                IsInversed = true,
-                Minimum = 0,
-                Maximum = numberOfMillisecondsToCountDownFrom,
-                ShowLabels = false,
-                ShowTicks = false,
-            };
-            RadialRange radialRange = new()
-            {
-                StartValue = 0,
-                EndValue = numberOfMillisecondsToCountDownFrom,
-            };
-            radialRange.SetAppThemeColor(RadialRange.FillProperty, Color.FromArgb("#FF003366"), Colors.WhiteSmoke);
-            radialAxis.Ranges.Add(radialRange);
-            sfRadialGauge.Axes.Add(radialAxis);
+            //RadialAxis radialAxis = new()
+            //{
+            //    StartAngle = 270,
+            //    EndAngle = 270,
+            //    IsInversed = true,
+            //    Minimum = 0,
+            //    Maximum = numberOfMillisecondsToCountDownFrom,
+            //    ShowLabels = false,
+            //    ShowTicks = false,
+            //};
+            //RadialRange radialRange = new()
+            //{
+            //    StartValue = 0,
+            //    EndValue = numberOfMillisecondsToCountDownFrom,
+            //};
+            //radialRange.SetAppThemeColor(RadialRange.FillProperty, Color.FromArgb("#FF003366"), Colors.WhiteSmoke);
+            //radialAxis.Ranges.Add(radialRange);
+            //sfRadialGauge.Axes.Add(radialAxis);
 
-            RangePointer rangePointer = new()
-            {
-                AnimationDuration = numberOfMillisecondsToCountDownFrom,
-                EnableAnimation = true,
-                Value = numberOfMillisecondsToCountDownFrom,
-                PointerWidth = 15,
-                PointerOffset = -3
-            };
-            rangePointer.SetAppThemeColor(RangePointer.FillProperty, Colors.WhiteSmoke, Color.FromArgb("#FF6E6E6E"));
-            radialAxis.Pointers.Add(rangePointer);
+            //RangePointer rangePointer = new()
+            //{
+            //    AnimationDuration = numberOfMillisecondsToCountDownFrom,
+            //    EnableAnimation = true,
+            //    Value = numberOfMillisecondsToCountDownFrom,
+            //    PointerWidth = 15,
+            //    PointerOffset = -3
+            //};
+            //rangePointer.SetAppThemeColor(RangePointer.FillProperty, Colors.WhiteSmoke, Color.FromArgb("#FF6E6E6E"));
+            //radialAxis.Pointers.Add(rangePointer);
 
-            ShowCountDownTimer.ContentTemplate = new DataTemplate(() =>
-            {
-                var _content = new AbsoluteLayout { sfRadialGauge, CountDownLabel };
-                _content.SetLayoutBounds(sfRadialGauge, new Rect(0.5, 0.5, 1, 1));
-                _content.SetLayoutFlags(sfRadialGauge, AbsoluteLayoutFlags.All);
-                _content.SetLayoutBounds(CountDownLabel, new Rect(0.5, 0.5, 1, 1));
-                _content.SetLayoutFlags(CountDownLabel, AbsoluteLayoutFlags.All);
-                return _content;
-            });
+            //ShowCountDownTimer.ContentTemplate = new DataTemplate(() =>
+            //{
+            //    var _content = new AbsoluteLayout { sfRadialGauge, CountDownLabel };
+            //    _content.SetLayoutBounds(sfRadialGauge, new Rect(0.5, 0.5, 1, 1));
+            //    _content.SetLayoutFlags(sfRadialGauge, AbsoluteLayoutFlags.All);
+            //    _content.SetLayoutBounds(CountDownLabel, new Rect(0.5, 0.5, 1, 1));
+            //    _content.SetLayoutFlags(CountDownLabel, AbsoluteLayoutFlags.All);
+            //    return _content;
+            //});
         }
 
         public async Task<string> GetResult()
